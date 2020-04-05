@@ -1,0 +1,20 @@
+body{
+    size: auto;
+}
+header{
+    width: available;
+    height: auto;
+}
+
+
+#middle_part{
+    width: available;
+    height: auto;
+    text-align: center;
+    color: red;
+}
+
+footer {
+    width: available;
+    height: auto;
+}

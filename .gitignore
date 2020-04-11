@@ -2,6 +2,6 @@
 venv/*
 server/resources/creds/*
 client/*
-server/dao/__pycache__/*
+server/models/__pycache__/*
 server/entities/__pycache__/*
 server/server_utils/__pycache__/*

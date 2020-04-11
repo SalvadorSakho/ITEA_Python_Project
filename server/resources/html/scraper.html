@@ -5,6 +5,63 @@
     <title>Scraper UI</title>
 </head>
 <body>
-
+<header>
+    <div>WEB Scraper</div>
+</header>
+<div id="main_part_id">
+    <form id="url_form_id" name="url_form_name" action="post">
+        <fieldset id="field_set_id">
+            <input type="text" id="web_page_input_id"
+                   class="web_page_input_class"
+                   placeholder="URL for scrap">
+        </fieldset>
+        <div id="test_bnt_div" style="width: auto; padding-top: 5px">
+            <input type="submit" value="Send">
+        </div>
+    </form>
+    <div style="width: auto; padding-top: 10px">
+        <button id="add_url_for_scrub_btn_id" onclick="new_link()">
+            Add new URL
+        </button>
+    </div>
+</div>
+<footer>
+</footer>
 </body>
+<script type="text/javascript">
+    var input_counter = 1;
+
+    function new_link() {
+        input_counter++;
+        var div1 = document.createElement('div');
+        div1.style.cssText = 'width: '
+            + document.getElementById('field_set_id').style.width + 'px;'
+            + 'padding-top: 5px'
+
+        var inputField = document.createElement('input');
+        inputField.id = input_counter;
+        inputField.type = "text"
+        inputField.className = "web_page_input_class"
+        inputField.placeholder = "URL for scrap"
+        inputField.style.cssText = 'width: '
+            + document.getElementById('web_page_input_id')
+                .style.width + 'px;'
+        div1.appendChild(inputField)
+        document.getElementById('field_set_id').appendChild(div1);
+
+    }
+
+    // function to delete the newly added set of elements
+    function delIt(eleId) {
+        d = document;
+        var ele = d.getElementById(eleId);
+        var parentEle = d.getElementById('url_form_id');
+        parentEle.removeChild(ele);
+    }
+</script>
+<style>
+    .web_page_input_class {
+        width: 100%;
+    }
+</style>
 </html>

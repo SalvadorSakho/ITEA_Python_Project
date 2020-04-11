@@ -9,11 +9,12 @@
     <div>WEB Scraper</div>
 </header>
 <div id="main_part_id">
-    <form id="url_form_id" name="url_form_name" action="post">
+    <form id="url_form_id" name="url_form_name" method="post">
         <fieldset id="field_set_id">
-            <input type="text" id="web_page_input_id"
+            <input type="text"
+                   id="web_page_input_id"
                    class="web_page_input_class"
-                   placeholder="URL for scrap">
+                   name="web_page_input_name" placeholder="URL for scrap">
         </fieldset>
         <div id="test_bnt_div" style="width: auto; padding-top: 5px">
             <input type="submit" value="Send">
@@ -43,6 +44,7 @@
         inputField.type = "text"
         inputField.className = "web_page_input_class"
         inputField.placeholder = "URL for scrap"
+        inputField.name = 'web_page_input_name'
         inputField.style.cssText = 'width: '
             + document.getElementById('web_page_input_id')
                 .style.width + 'px;'

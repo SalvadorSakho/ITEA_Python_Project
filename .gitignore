@@ -1,6 +1,7 @@
 .idea/*
 venv/*
 server/static/creds/*
+server/static/scrapdir/*
 client/*
 server/models/__pycache__/*
 server/entities/__pycache__/*

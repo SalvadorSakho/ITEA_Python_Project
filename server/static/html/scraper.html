@@ -24,6 +24,9 @@
         <button id="add_url_for_scrub_btn_id" onclick="new_link()">
             Add new URL
         </button>
+        <button id="remove_url_for_scrub_btn_id" onclick="delIt()">
+            Remover URL
+        </button>
     </div>
 </div>
 <footer>
@@ -40,25 +43,26 @@
             + 'padding-top: 5px'
 
         var inputField = document.createElement('input');
-        inputField.id = input_counter;
+        inputField.id = 'input_id_' + input_counter;
         inputField.type = "text"
         inputField.className = "web_page_input_class"
         inputField.placeholder = "URL for scrap"
         inputField.name = 'web_page_input_name'
         inputField.style.cssText = 'width: '
             + document.getElementById('web_page_input_id')
-                .style.width + 'px;'
+                .style.width + 'px; padding-top: 5px;'
         div1.appendChild(inputField)
-        document.getElementById('field_set_id').appendChild(div1);
+        document.getElementById('field_set_id').appendChild(inputField);
 
     }
 
     // function to delete the newly added set of elements
     function delIt(eleId) {
         d = document;
-        var ele = d.getElementById(eleId);
-        var parentEle = d.getElementById('url_form_id');
+        var ele = d.getElementById('input_id_' + input_counter);
+        var parentEle = d.getElementById('field_set_id');
         parentEle.removeChild(ele);
+        input_counter--
     }
 </script>
 <style>
